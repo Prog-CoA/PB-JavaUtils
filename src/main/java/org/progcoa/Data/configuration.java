@@ -19,13 +19,7 @@ public class configuration {
     public static Object Load(String path){
         File file = new File(path);
 
-        if(!(file.exists())) {
-            try {
-                file.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        if(!(file.exists())) Save(null, path);
 
         try(FileInputStream f = new FileInputStream(path);
             BufferedInputStream b = new BufferedInputStream(f);
