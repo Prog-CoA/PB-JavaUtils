@@ -8,8 +8,6 @@
 
 ## 使用方法
 
-maven
-
 ```xml
 <dependency>
     <groupId>com.github.Prog-CoA</groupId>
@@ -31,15 +29,12 @@ maven
 
 ※KeyHookを使用するためにはjnativehookがインポートされている必要があります。
 
-### 制作者情報
+## 制作者情報
 name: SHHIKA
 
 Discord: SHHIKA#4832
 
-name: raosaru
 
-Discord: らおさる#5406
+### initial commit: 2022/01/17
 
-初回掲載日: 2022/01/17
-
-最終更新日: 2022/01/20
+### latest c ommit: 2022/01/20
