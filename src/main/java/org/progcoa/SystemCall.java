@@ -2,6 +2,7 @@ package org.progcoa;
 
 import java.io.IOException;
 
+@SuppressWarnings("all")
 public class SystemCall {
 
     private Process process;
