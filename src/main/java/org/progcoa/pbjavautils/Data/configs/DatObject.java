@@ -1,6 +1,6 @@
-package org.progcoa.Data.configs;
+package org.progcoa.pbjavautils.Data.configs;
 
-import org.progcoa.Data.configuration;
+import org.progcoa.pbjavautils.Data.configuration;
 
 import java.io.Serializable;
 import java.util.HashMap;

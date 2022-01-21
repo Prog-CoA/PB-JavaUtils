@@ -1,4 +1,4 @@
-package org.progcoa.Timer;
+package org.progcoa.pbjavautils.Timer;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

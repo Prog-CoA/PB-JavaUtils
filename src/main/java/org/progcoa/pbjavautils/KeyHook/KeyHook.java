@@ -1,11 +1,10 @@
-package org.progcoa.KeyHook;
+package org.progcoa.pbjavautils.KeyHook;
 
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
 
-import java.awt.event.KeyEvent;
 import java.util.logging.LogManager;
 
 @SuppressWarnings("all")

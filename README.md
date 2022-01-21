@@ -12,9 +12,11 @@
 <dependency>
     <groupId>com.github.Prog-CoA</groupId>
     <artifactId>PB-JavaUtils</artifactId>
-    <version>1.0.0</version>
+    <version>VERSION</version>
 </dependency>
 ```
+
+VERSION は LATEST または 各バージョン に書き換えてください
 
 ```xml
 <repository>
@@ -33,7 +35,6 @@
 name: SHHIKA
 
 Discord: SHHIKA#4832
-
 
 ### initial commit: 2022/01/17
 

@@ -1,4 +1,4 @@
-package org.progcoa.KeyHook;
+package org.progcoa.pbjavautils.KeyHook;
 
 import org.jnativehook.keyboard.NativeKeyEvent;
 

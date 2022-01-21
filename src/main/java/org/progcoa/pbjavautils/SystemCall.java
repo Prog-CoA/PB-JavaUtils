@@ -1,4 +1,4 @@
-package org.progcoa;
+package org.progcoa.pbjavautils;
 
 import java.io.IOException;
 

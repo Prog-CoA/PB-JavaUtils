@@ -1,4 +1,4 @@
-package org.progcoa.Data;
+package org.progcoa.pbjavautils.Data;
 
 import java.io.*;
 

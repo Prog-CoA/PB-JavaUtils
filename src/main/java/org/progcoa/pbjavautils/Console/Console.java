@@ -1,4 +1,4 @@
-package org.progcoa.Console;
+package org.progcoa.pbjavautils.Console;
 
 import java.util.Scanner;
 

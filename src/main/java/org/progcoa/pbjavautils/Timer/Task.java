@@ -1,4 +1,4 @@
-package org.progcoa.Timer;
+package org.progcoa.pbjavautils.Timer;
 
 @SuppressWarnings("all")
 public interface Task {
