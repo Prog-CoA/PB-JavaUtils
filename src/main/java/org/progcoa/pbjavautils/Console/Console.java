@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Console {
 
     public static String ReadLine(){
-        return new Scanner(System.in).next();
+        return new Scanner(System.in).nextLine();
     }
 
     public static void WriteLine(String message){
