@@ -56,7 +56,7 @@ public class DatObject implements Serializable {
     }
 
     public void load(){
-        object = configuration.Load(path);
+        if(configuration.Load(path) != null) object = configuration.Load(path);
     }
 
     public void save(){
