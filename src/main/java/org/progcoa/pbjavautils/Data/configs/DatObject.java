@@ -11,6 +11,7 @@ public class DatObject implements Serializable {
 
     private Map<String, Object> map = new HashMap<>();
     private String path;
+    protected Object object;
 
     public DatObject(){
         this("data.dat");
@@ -38,11 +39,27 @@ public class DatObject implements Serializable {
         return map;
     }
 
-    public void save(){
+    public void setObject(Object object) {
+        this.object = object;
+    }
+
+    public Object getObject() {
+        return object;
+    }
+
+    public void saveMap(){
         configuration.Save(map, path);
     }
 
+    public void loadMap(){
+        if(configuration.Load(path) != null) this.map = (Map<String, Object>) object;
+    }
+
     public void load(){
-        if(configuration.Load(path) != null) this.map = (Map<String, Object>) configuration.Load(path);
+        object = configuration.Load(path);
+    }
+
+    public void save(){
+        configuration.Save(object, path);
     }
 }
