@@ -16,7 +16,7 @@
 </dependency>
 ```
 
-VERSION は LATEST または 各バージョン に書き換えてください
+VERSION は 各バージョン に書き換えてください
 
 ```xml
 <repository>
