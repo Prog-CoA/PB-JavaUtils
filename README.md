@@ -29,8 +29,6 @@ VERSION は LATEST または 各バージョン に書き換えてください
 
 各クラスの詳細はProg-CoA公式サイトに記載して置く予定です。
 
-※KeyHookを使用するためにはjnativehookがインポートされている必要があります。
-
 ## 制作者情報
 name: SHHIKA
 
@@ -38,4 +36,4 @@ Discord: SHHIKA#4832
 
 ### initial commit: 2022/01/17
 
-### latest commit: 2022/01/20
+### latest commit: 2022/02/06
