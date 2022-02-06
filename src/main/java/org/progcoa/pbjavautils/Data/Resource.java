@@ -18,9 +18,18 @@ public class Resource {
      * @param file 出力したいファイル
      */
     public static void loadFile(String file) throws IOException, URISyntaxException {
-        File destDir = new File("options/" + file); // コピー先のディレクトリ
+        File destDir = new File("options/" + file);
 
         loadFile(file, destDir);
+    }
+
+    /**
+     * @param file 出力したいディレクトリ
+     */
+    public static void loadDirectory(String file) throws IOException, URISyntaxException {
+        File destDir = new File("options/configs/" + file);
+
+        loadDirectory(file, destDir);
     }
 
     /**
@@ -31,7 +40,6 @@ public class Resource {
         if (!destDir.exists()) {
             final File jarFile = new File(Resource.class.getProtectionDomain().getCodeSource().getLocation().getPath());
             if (jarFile.isFile()) {
-                // JARで実行する場合
                 final JarFile jar = new JarFile(jarFile);
                 for (Enumeration<JarEntry> entries = jar.entries(); entries.hasMoreElements(); ) {
                     JarEntry entry = entries.nextElement();
@@ -51,7 +59,6 @@ public class Resource {
                 }
                 jar.close();
             } else {
-                // IDEで実行する場合
                 final File resource = new File(Resource.class.getClassLoader().getResource(file).toURI());
                 FileUtils.copyFile(resource, destDir);
             }
@@ -60,13 +67,11 @@ public class Resource {
 
     /**
      * @param file 出力したいディレクトリ
+     * @param destDir 保存される場所
      */
-    public static void loadDirectory(String file) throws IOException, URISyntaxException {
-        File destDir = new File("options/configs/" + file); // コピー先のディレクトリ
-
+    public static void loadDirectory(String file, File destDir) throws IOException, URISyntaxException {
         final File jarFile = new File(Resource.class.getProtectionDomain().getCodeSource().getLocation().getPath());
         if (jarFile.isFile()) {
-            // JARで実行する場合
             final JarFile jar = new JarFile(jarFile);
             for (Enumeration<JarEntry> entries = jar.entries(); entries.hasMoreElements(); ) {
                 JarEntry entry = entries.nextElement();
@@ -87,7 +92,6 @@ public class Resource {
             }
             jar.close();
         } else {
-            // IDEで実行する場合
             final File resource = new File(Resource.class.getClassLoader().getResource(file).toURI());
             FileUtils.copyDirectory(resource, destDir);
         }
