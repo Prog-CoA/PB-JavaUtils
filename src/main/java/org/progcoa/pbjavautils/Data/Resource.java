@@ -14,10 +14,20 @@ import java.util.jar.JarFile;
 @SuppressWarnings("all")
 public class Resource {
 
+    public Class aClass;
+
+    public void setaClass(Class target){
+        aClass = target;
+    }
+
+    public Resource(Class target){
+        aClass = target;
+    }
+
     /**
      * @param file 出力したいファイル
      */
-    public static void loadFile(String file) throws IOException, URISyntaxException {
+    public void loadFile(String file) throws IOException, URISyntaxException {
         File destDir = new File("options/" + file);
 
         loadFile(file, destDir);
@@ -26,7 +36,7 @@ public class Resource {
     /**
      * @param file 出力したいディレクトリ
      */
-    public static void loadDirectory(String file) throws IOException, URISyntaxException {
+    public void loadDirectory(String file) throws IOException, URISyntaxException {
         File destDir = new File("options/configs/" + file);
 
         loadDirectory(file, destDir);
@@ -36,9 +46,9 @@ public class Resource {
      * @param file 出力したいファイル
      * @param destDir 保存される場所
      */
-    public static void loadFile(String file, File destDir) throws IOException, URISyntaxException {
+    public void loadFile(String file, File destDir) throws IOException, URISyntaxException {
         if (!destDir.exists()) {
-            final File jarFile = new File(Resource.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+            final File jarFile = new File(aClass.getProtectionDomain().getCodeSource().getLocation().getPath());
             if (jarFile.isFile()) {
                 final JarFile jar = new JarFile(jarFile);
                 for (Enumeration<JarEntry> entries = jar.entries(); entries.hasMoreElements(); ) {
@@ -59,7 +69,7 @@ public class Resource {
                 }
                 jar.close();
             } else {
-                final File resource = new File(Resource.class.getClassLoader().getResource(file).toURI());
+                final File resource = new File(aClass.getClassLoader().getResource(file).toURI());
                 FileUtils.copyFile(resource, destDir);
             }
         }
@@ -69,8 +79,8 @@ public class Resource {
      * @param file 出力したいディレクトリ
      * @param destDir 保存される場所
      */
-    public static void loadDirectory(String file, File destDir) throws IOException, URISyntaxException {
-        final File jarFile = new File(Resource.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+    public void loadDirectory(String file, File destDir) throws IOException, URISyntaxException {
+        final File jarFile = new File(aClass.getProtectionDomain().getCodeSource().getLocation().getPath());
         if (jarFile.isFile()) {
             final JarFile jar = new JarFile(jarFile);
             for (Enumeration<JarEntry> entries = jar.entries(); entries.hasMoreElements(); ) {
@@ -92,7 +102,7 @@ public class Resource {
             }
             jar.close();
         } else {
-            final File resource = new File(Resource.class.getClassLoader().getResource(file).toURI());
+            final File resource = new File(aClass.getClassLoader().getResource(file).toURI());
             FileUtils.copyDirectory(resource, destDir);
         }
     }
