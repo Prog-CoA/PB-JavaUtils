@@ -15,6 +15,7 @@ import java.util.jar.JarFile;
 public class Resource {
 
     public Class aClass;
+    public String OutPath;
 
     public void setaClass(Class target){
         aClass = target;
@@ -22,6 +23,10 @@ public class Resource {
 
     public Resource(Class target){
         aClass = target;
+    }
+
+    public String getOutPath(){
+        return OutPath;
     }
 
     /**
@@ -47,6 +52,7 @@ public class Resource {
      * @param destDir 保存される場所
      */
     public void loadFile(String file, File destDir) throws IOException, URISyntaxException {
+        OutPath = destDir.getPath();
         if (!destDir.exists()) {
             final File jarFile = new File(aClass.getProtectionDomain().getCodeSource().getLocation().getPath());
             if (jarFile.isFile()) {
@@ -80,6 +86,7 @@ public class Resource {
      * @param destDir 保存される場所
      */
     public void loadDirectory(String file, File destDir) throws IOException, URISyntaxException {
+        OutPath = destDir.getPath();
         final File jarFile = new File(aClass.getProtectionDomain().getCodeSource().getLocation().getPath());
         if (jarFile.isFile()) {
             final JarFile jar = new JarFile(jarFile);

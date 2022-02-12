@@ -9,7 +9,7 @@ public class Console {
         return new Scanner(System.in).nextLine();
     }
 
-    public static void WriteLine(String message){
+    public static void WriteLine(Object message){
         System.out.println(message);
     }
 }

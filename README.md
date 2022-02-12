@@ -25,6 +25,34 @@ VERSION は LATEST または 各バージョン に書き換えてください
 </repository>
 ```
 
+## 使用ライブラリ
+```xml
+<dependency>
+    <groupId>com.1stleg</groupId>
+    <artifactId>jnativehook</artifactId>
+    <version>2.1.0</version>
+</dependency>
+
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.9.0</version>
+</dependency>
+
+<dependency>
+    <groupId>org.jetbrains</groupId>
+    <artifactId>annotations</artifactId>
+    <version>RELEASE</version>
+    <scope>compile</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.yaml</groupId>
+    <artifactId>snakeyaml</artifactId>
+    <version>1.16</version>
+</dependency>
+```
+
 ## 各クラスについて
 
 各クラスの詳細はProg-CoA公式サイトに記載して置く予定です。
@@ -36,4 +64,4 @@ Discord: SHHIKA#4832
 
 ### initial commit: 2022/01/17
 
-### latest commit: 2022/02/06
+### latest commit: 2022/02/12
