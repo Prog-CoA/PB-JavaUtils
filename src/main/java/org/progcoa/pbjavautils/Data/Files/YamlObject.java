@@ -1,4 +1,4 @@
-package org.progcoa.pbjavautils.Data.configs;
+package org.progcoa.pbjavautils.Data.Files;
 
 import org.progcoa.pbjavautils.Console.Console;
 import org.progcoa.pbjavautils.Data.Resource;

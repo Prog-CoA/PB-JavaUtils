@@ -1,4 +1,4 @@
-package org.progcoa.pbjavautils.Data.configs;
+package org.progcoa.pbjavautils.Data.Files;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
