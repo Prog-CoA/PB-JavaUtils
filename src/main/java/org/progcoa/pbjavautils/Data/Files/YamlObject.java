@@ -58,7 +58,6 @@ public class YamlObject {
 
     public void Save(){
         String yamlData = yaml.dumpAs(map, Tag.YAML, DumperOptions.FlowStyle.BLOCK);
-        Console.WriteLine(yamlData);
 
         FileWriter filewriter = null;
         try {
