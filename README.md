@@ -57,7 +57,7 @@ VERSION は LATEST または 各バージョン に書き換えてください
 
 各クラスの詳細はProg-CoA公式サイトに記載して置く予定です。
 
-## 制作者情報
+## 製作者
 name: SHHIKA
 
 Discord: SHHIKA#4832

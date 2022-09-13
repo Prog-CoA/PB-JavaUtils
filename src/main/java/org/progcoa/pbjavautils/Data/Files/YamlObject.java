@@ -72,7 +72,7 @@ public class YamlObject {
     private void SaveDefault(){
         resource = new Resource(aClass);
         try {
-            resource.loadFile(path);
+            resource.loadFile(path, new File(path));
         } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
         }
